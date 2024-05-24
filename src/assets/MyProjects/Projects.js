@@ -3,6 +3,7 @@ import react from "../SkillsLanguages/react.svg";
 import tailwind from "../SkillsLanguages/tailwind.svg";
 import BikeStore from "./Images/BikeStore.jpg";
 import sass from "../SkillsLanguages/sass.svg";
+import Arcadia from "./Images/Arcadia.webp";
 
 export const Projects = [
   {
@@ -25,5 +26,16 @@ export const Projects = [
     Languages: [react, tailwind],
     url: "https://bikestore-shop.netlify.app/",
     github: "https://github.com/danielbeinat/BikeStore.git",
+  },
+
+
+
+  {
+    name: "Instituto Arcadia",
+    image: Arcadia,
+    description: "Recientemente, diseñé y desarrollé un sitio web para gestionar inscripciones a carreras utilizando tecnologías de vanguardia como React y Tailwind CSS. El proyecto se centró en crear una interfaz de usuario intuitiva y receptiva",
+    Languages: [react, tailwind],
+    url: "https://arcadia-university.netlify.app",
+    github: "https://github.com/danielbeinat/Arcadia.git",
   },
 ];
