@@ -63,7 +63,7 @@ export const Portfolio = () => {
                       target="_blank"
                       className="inline-block transition duration-700 ease-in-out bg-black text-white px-5 py-3 font-medium rounded-lg shadow-lg shadow-black/50 transform hover:-translate-y-1 hover:scale-110"
                     >
-                      Proyectos
+                      Ver Online
                     </a>
 
                     <a
