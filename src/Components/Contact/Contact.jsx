@@ -59,7 +59,7 @@ export const Contact = () => {
           type="text"
           name="user_name"
           required
-          placeholder="Escriba su nombre"
+          placeholder="Nombre"
         />
         <label className="font-bold md:text-sm text-xs text-gray-500">
           Email
@@ -69,7 +69,7 @@ export const Contact = () => {
           type="email"
           name="user_email"
           required
-          placeholder="Escriba su correo"
+          placeholder="Correo electrónico"
         />
         <label className="font-bold md:text-sm text-xs text-gray-500">
           Mensaje
@@ -78,7 +78,7 @@ export const Contact = () => {
           className="bg-zinc-200 bg-zinc-200 h-52 px-3 py-3 md:font-medium text-sm outline-none h-[200px] rounded"
           name="message"
           required
-          placeholder="Escriba su consulta"
+          placeholder="Escribe tu Mensaje..."
         />
         <input
           className="px-3 py-3 mt-3 cursor-pointer md:w-1/3 h-14  font-medium bg-black text-white rounded-lg shadow-lg shadow-black/50 transform hover:-translate-y-1 hover:scale-110 transition duration-700 ease-in-out"

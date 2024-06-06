@@ -67,7 +67,7 @@ export const ChatBox = () => {
             <div className="fixed lg:bottom-5 font-poppins shadow-lg lg:right-5 z-50 lg:w-96 lg:h-auto bottom-0 w-full h-full right-0 bg-gray-800 rounded ">
               <div className="flex items-center p-3 justify-between">
                 <h1 className="text-white text-sm font-bold text-center">
-                  Dejar un mensaje
+                  Contáctame
                 </h1>
                 <button onClick={() => setShow(!show)}>
                   <svg
@@ -138,7 +138,7 @@ export const ChatBox = () => {
                     </fieldset>
                     <fieldset className="flex flex-col gap-3">
                       <label className="font-bold text-sm">
-                        Deja tu mensaje aquí
+                        Escribe tu mensaje aquí
                       </label>
                       <textarea
                         className="rounded p-2 border-2 border-gray-300 text-sm resize-none h-24 "
