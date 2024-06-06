@@ -143,6 +143,7 @@ export const ChatBox = () => {
                       <textarea
                         className="rounded p-2 border-2 border-gray-300 text-sm resize-none h-24 "
                         name="message"
+                        required
                       ></textarea>
                     </fieldset>
                     <div className="flex justify-end bg-white rounded-b">
