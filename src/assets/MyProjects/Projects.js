@@ -5,6 +5,7 @@ import BikeStore from "./Images/BikeStore.jpg";
 import sass from "../SkillsLanguages/sass.svg";
 import Arcadia from "./Images/Arcadia.webp";
 import MP3Linker from "./Images/mp3linker.jpg";
+import VisualFocus from "./Images/visualfocus.jpg";
 
 export const Projects = [
   {
@@ -49,5 +50,15 @@ export const Projects = [
     Languages: [react, tailwind],
     url: "https://arcadia-university.netlify.app",
     github: "https://github.com/danielbeinat/Arcadia.git",
+  },
+
+  {
+    id: 5,
+    name: "Visual Image",
+    image: VisualFocus,
+    description: "Desarrollé una aplicación web que utiliza la API de Unsplash para buscar y descargar fotos de alta calidad de forma sencilla. Además, está diseñada para ser responsive, asegurando una buena experiencia de usuario en diferentes dispositivos.",
+    Languages: [react, tailwind],
+    url: "https://visual-focus.netlify.app/",
+    github: "https://github.com/danielbeinat/Visual-Focus.git",
   },
 ];
