@@ -58,7 +58,7 @@ export const Projects = [
     image: VisualFocus,
     description: "Desarrollé una aplicación web que utiliza la API de Unsplash para buscar y descargar fotos de alta calidad de forma sencilla. Además, está diseñada para ser responsive, asegurando una buena experiencia de usuario en diferentes dispositivos.",
     Languages: [react, tailwind],
-    url: "https://visual-focus.netlify.app/",
+    url: "https://visual-image.netlify.app/",
     github: "https://github.com/danielbeinat/Visual-Focus.git",
   },
 ];
