@@ -37,7 +37,7 @@ export const Projects = [
     name: "MP3Linker",
     image: MP3Linker,
     description: "Desarrollé un convertidor de YouTube a MP3 utilizando React y Vite. La aplicación permite a los usuarios convertir videos de YouTube en archivos de audio MP3 con una interfaz moderna y receptiva. Además, integra la API de YouTube para obtener videos y utiliza i18next para traducir el contenido a varios idiomas.",
-    Languages: [react, tailwind],
+    Languages: [react, tailwind, ts],
     url: "https://mp3linker.netlify.app/",
     github: "https://github.com/danielbeinat/Convert-YouTube-to-MP3",
   },
