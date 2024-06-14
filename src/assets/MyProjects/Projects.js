@@ -6,6 +6,7 @@ import sass from "../SkillsLanguages/sass.svg";
 import Arcadia from "./Images/Arcadia.webp";
 import MP3Linker from "./Images/mp3linker.jpg";
 import VisualFocus from "./Images/visualfocus.jpg";
+import ts from "../SkillsLanguages/ts.svg";
 
 export const Projects = [
   {
@@ -57,7 +58,7 @@ export const Projects = [
     name: "Visual Image",
     image: VisualFocus,
     description: "Desarrollé una aplicación web que utiliza la API de Unsplash para buscar y descargar fotos de alta calidad de forma sencilla. Además, está diseñada para ser responsive, asegurando una buena experiencia de usuario en diferentes dispositivos.",
-    Languages: [react, tailwind],
+    Languages: [react, tailwind, ts],
     url: "https://visual-image.netlify.app/",
     github: "https://github.com/danielbeinat/Visual-Focus.git",
   },
