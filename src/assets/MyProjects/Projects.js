@@ -26,7 +26,7 @@ export const Projects = [
     image: BikeStore,
     description:
       "Desarrollé una tienda de bicicletas utilizando tecnologías modernas como React y Tailwind CSS. El proyecto incluyó la creación de una interfaz de usuario interactiva y responsiva que permite a los usuarios navegar y comprar bicicletas de manera intuitiva. Implementé un sistema de filtrado avanzado para que los clientes puedan buscar productos por categorías, precios y características específicas.",
-    Languages: [react, tailwind],
+    Languages: [react, tailwind, ts],
     url: "https://bikestore-shop.netlify.app/",
     github: "https://github.com/danielbeinat/BikeStore.git",
   },
