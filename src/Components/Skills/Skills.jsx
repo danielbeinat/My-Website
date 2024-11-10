@@ -12,8 +12,8 @@ export const Skills = () => {
         </h1>
 
         <p className="text-center font-medium text-sm md:text-base opacity-80 ">
-          Estas son algunas de las tecnologías y herramientas que utilizo para
-          desarrollar proyectos web:
+          Estas son las tecnologías y herramientas que utilizo para desarrollar
+          proyectos web:
         </p>
         <ul className="flex justify-center gap-14 text-center">
           <li className="grid grid-cols-3 md:grid-cols-6 md:gap-16 gap-5">
