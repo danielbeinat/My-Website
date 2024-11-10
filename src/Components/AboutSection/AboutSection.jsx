@@ -13,9 +13,9 @@ export const AboutSection = () => {
 
           <div className="flex flex-col gap-9">
             <p className="md:w-4/5 w-4/5 mx-auto font-medium text-left text-sm md:text-base md:text-justify opacity-80 ">
-              Como Frontend , me especializo en el diseño y desarrollo de
-              interfaces de usuario atractivas, intuitivas y receptivas. Tengo
-              un profundo conocimiento de las últimas tecnologías web, como
+              Como Frontend Developer, me especializo en el diseño y desarrollo
+              de interfaces de usuario atractivas, intuitivas y receptivas.
+              Tengo un amplio conocimiento de las últimas tecnologías web, como
               HTML, CSS, JavaScript y frameworks populares como React. Esto me
               permite crear aplicaciones web modernas y escalables que cumplen
               con los más altos estándares de usabilidad y accesibilidad.
