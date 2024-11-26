@@ -11,7 +11,7 @@ export const Footer = () => {
       </div>
       <hr className="mt-[40px] border-white border-solid " />
       <p className="text-white text-[13px] text-center">
-        © 2023 Daniel Beinat, Inc. All rights reserved.
+        © 2023 Daniel Beinat. Todos los derechos reservados.
       </p>
     </footer>
   );
