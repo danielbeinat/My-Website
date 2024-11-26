@@ -3,7 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* styles.css */
 html {
   scroll-behavior: smooth;
 }
@@ -16,13 +15,13 @@ body {
 }
 
 #about {
-  scroll-margin-top: 45px; /* Igual a la altura del navbar */
+  scroll-margin-top: 45px;
 }
 
 #skills {
-  scroll-margin-top: 5px; /* Igual a la altura del navbar */
+  scroll-margin-top: 5px;
 }
 
 #contact {
-  scroll-margin-top: 5px; /* Igual a la altura del navbar */
+  scroll-margin-top: 5px;
 }

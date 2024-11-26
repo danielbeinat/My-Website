@@ -1,5 +1,3 @@
-// import { skills } from "../../assets/SkillsLanguages/SkillsLanguages.js";
-
 export const Skills = () => {
   const card = [
     {
