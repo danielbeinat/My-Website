@@ -178,11 +178,11 @@ const ProyectoAnimado = ({ proyecto: Projects }) => {
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       variants={cardVariants}
-      className="bg-[#121326] border-2 border-[#1F2032] rounded-lg overflow-hidden mb-8"
+      className="relative bg-[#121326] border-2 border-[#1F2032] rounded-lg overflow-hidden mb-8 pb-20 shadow-2xl"
     >
-      <div className="p-6 flex flex-col gap-4  ">
+      <div className="p-5 flex flex-col gap-4">
         <img
-          className="border-1 border-[#1F2032] rounded-lg shadow-2xl md:w-full md:h-[200px] w-3/4 h-3/4 "
+          className="border-1 border-[#1F2032] rounded-lg shadow-2xl md:w-full md:h-[200px] w-full h-3/4 "
           src={Projects.image}
           loading="lazy"
         />
@@ -201,7 +201,7 @@ const ProyectoAnimado = ({ proyecto: Projects }) => {
             <img key={index} className="w-8 h-8" src={tech} loading="lazy" />
           ))}
         </div>
-        <div className="flex justify-between items-center ">
+        <div className="flex justify-between items-center absolute bottom-0 w-full pr-12 pb-4 ">
           <a
             href={Projects.url}
             target="_blank"

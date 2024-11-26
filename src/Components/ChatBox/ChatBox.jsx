@@ -64,7 +64,7 @@ export const ChatBox = () => {
       <TransitionGroup>
         {show && (
           <CSSTransition classNames="chat-box" timeout={300} unmountOnExit>
-            <div className="fixed lg:bottom-5 font-poppins shadow-lg lg:right-5 z-50 lg:w-96 lg:h-auto bottom-0 w-full h-full right-0 bg-[#121326]  rounded ">
+            <div className="fixed lg:bottom-5 font-poppins shadow-lg lg:right-5 z-50 lg:w-96 lg:h-auto bottom-0 w-full h-full right-0 bg-[#121326]  rounded border-2 border-[#1F2032] shadow-lg  ">
               <div className="flex items-center p-3 justify-between">
                 <h1 className="text-white text-sm font-bold text-center">
                   Contáctame
@@ -110,11 +110,11 @@ export const ChatBox = () => {
                   </h1>
                 </div>
               ) : (
-                <div className="flex bg-white flex-col p-5 py-4 pb-5">
+                <div className="flex bg-white flex-col p-5 py-4 pb-5 ">
                   <form
                     ref={form}
                     onSubmit={sendEmail}
-                    className="flex flex-col gap-6"
+                    className="flex flex-col gap-6 "
                   >
                     <fieldset className="flex flex-col gap-3">
                       <label className="font-bold text-sm">Nombre</label>
