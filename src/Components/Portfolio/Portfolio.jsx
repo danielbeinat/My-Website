@@ -272,7 +272,7 @@ const ProyectoAnimado = ({ proyecto: Projects }) => {
 
 export const Portfolio = () => {
   return (
-    <section id="projects" className="md:py-24 py-10 font-poppins">
+    <section id="projects" className="font-poppins">
       <div className="container mx-auto flex flex-col gap-10 px-4 py-12 font-poppins">
         {/* <h1 className="text-4xl font-bold text-center mb-12 text-gray-800">
         Mi Portafolio
