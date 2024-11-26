@@ -43,7 +43,10 @@ export const NavBar = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20">
         <div className="flex justify-between items-center py-4 md:py-8">
-          <div className="flex items-center gap-2">
+          <div
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            className="flex items-center gap-2"
+          >
             <img src={netbook} alt="key" className="w-8 h-8 md:w-10 md:h-10" />
 
             <h1 className="text-base text-white font-bold hover:text-[#0CFCA7] cursor-pointer transition duration-500">
