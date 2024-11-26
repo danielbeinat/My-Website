@@ -2,17 +2,13 @@ export const AboutSection = () => {
   return (
     <>
       <section id="about" className="pt-24 font-poppins flex flex-col">
-        <div className="text-center flex flex-col gap-12">
-          <h1
-            className="md:text-4xl text-3xl font-bold underline underline-offset-8 uppercase
-
- "
-          >
+        <div className="flex items-center flex-col justify-center gap-9">
+          <h1 className="md:text-4xl text-center bg-gradient-to-r from-blue-500 via-cyan-400 to-teal-400 bg-clip-text text-transparent text-3xl  font-bold uppercase">
             Sobre mí
           </h1>
 
           <div className="flex flex-col gap-9">
-            <p className="md:w-4/5 w-4/5 mx-auto font-medium text-left text-sm md:text-base md:text-justify opacity-80 ">
+            <p className="md:w-4/5 w-4/5 mx-auto font-medium text-white text-left text-sm md:text-base md:text-justify opacity-80 ">
               Como Frontend Developer, me especializo en el diseño y desarrollo
               de interfaces de usuario atractivas, intuitivas y receptivas.
               Tengo un amplio conocimiento de las últimas tecnologías web, como
@@ -21,7 +17,7 @@ export const AboutSection = () => {
               con los más altos estándares de usabilidad y accesibilidad.
             </p>
 
-            <p className="w-4/5 mx-auto font-medium text-sm md:text-base text-left md:text-justify opacity-80">
+            <p className="w-4/5 mx-auto font-medium text-white text-sm md:text-base text-left md:text-justify opacity-80">
               Además de mis habilidades técnicas, mi formación como Analista en
               Sistemas me ha brindado una sólida comprensión de los procesos de
               negocio y los requisitos del cliente. Esta perspectiva me permite

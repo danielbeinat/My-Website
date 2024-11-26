@@ -47,7 +47,7 @@ export const Projects = [
     id: 4,
     name: "Instituto Arcadia",
     image: Arcadia,
-    description: "Recientemente, diseñé y desarrollé un sitio web para gestionar inscripciones a carreras utilizando tecnologías de vanguardia como React y Tailwind CSS. El proyecto se centró en crear una interfaz de usuario intuitiva y receptiva",
+    description: "Desarrollé un sitio web para gestionar inscripciones a carreras utilizando tecnologías de vanguardia como React y Tailwind CSS. El proyecto se centró en crear una interfaz de usuario intuitiva y receptiva",
     Languages: [react, tailwind, ts],
     url: "https://arcadia-university.netlify.app",
     github: "https://github.com/danielbeinat/Arcadia.git",

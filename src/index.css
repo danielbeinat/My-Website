@@ -8,4 +8,21 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Agrega esta regla CSS para quitar el scroll horizontal */
+body {
+  background-color: #06071b;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#about {
+  scroll-margin-top: 45px; /* Igual a la altura del navbar */
+}
+
+#skills {
+  scroll-margin-top: 5px; /* Igual a la altura del navbar */
+}
+
+#contact {
+  scroll-margin-top: 5px; /* Igual a la altura del navbar */
+}

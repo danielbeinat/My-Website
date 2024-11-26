@@ -35,10 +35,10 @@ export const Contact = () => {
   return (
     <section
       id="contact"
-      className="bg-gradient-to-tr to-blue-700 from-indigo-900 bg-cover bg-center bg-no-repeat font-poppins flex flex-col justify-center items-center gap-9 py-24"
+      className="font-poppins flex flex-col justify-center items-center gap-9 py-24"
     >
       <div className="flex items-center flex-col justify-center gap-9">
-        <h1 className="md:text-4xl text-3xl text-white font-bold uppercase">
+        <h1 className="md:text-4xl bg-gradient-to-r from-blue-500 via-cyan-400 to-teal-400 bg-clip-text text-transparent text-3xl  font-bold uppercase">
           Contacto
         </h1>
         <p className="text-center text-white mx-auto md:w-3/5 px-5 font-medium font-bold">
@@ -47,7 +47,7 @@ export const Contact = () => {
         </p>
       </div>
       <form
-        className="flex flex-col gap-3 bg-white p-5 md:py-10 md:px-10  shadow-lg shadow-black rounded-lg shadow-black/50 md:w-3/5 w-5/6 "
+        className="flex flex-col gap-3 bg-[#121326] p-5 md:py-10 md:px-10 border-solid border-2 border-[#1F2032]  shadow-lg shadow-black rounded-lg shadow-black/50 md:w-3/5 w-5/6 "
         ref={form}
         onSubmit={sendEmail}
       >
@@ -55,7 +55,7 @@ export const Contact = () => {
           Nombre
         </label>
         <input
-          className="w-full h-14 bg-zinc-200 px-3 md:font-medium text-sm bg-zinc-200 outline-none rounded"
+          className="w-full h-14 bg-zinc-200 border-solid border-2 border-[#1F2032] px-3 md:font-medium text-sm bg-zinc-200 outline-none rounded"
           type="text"
           name="user_name"
           required
@@ -65,7 +65,7 @@ export const Contact = () => {
           Email
         </label>
         <input
-          className="w-full h-14 bg-zinc-200 px-3 md:font-medium  text-sm bg-zinc-200 outline-none rounded"
+          className="w-full h-14 bg-zinc-200 border-solid border-2 border-[#1F2032] px-3 md:font-medium  text-sm bg-zinc-200 outline-none rounded"
           type="email"
           name="user_email"
           required
@@ -75,13 +75,13 @@ export const Contact = () => {
           Mensaje
         </label>
         <textarea
-          className="bg-zinc-200 bg-zinc-200 h-52 px-3 py-3 md:font-medium text-sm outline-none h-[200px] rounded"
+          className="bg-zinc-200 bg-zinc-200 border-solid border-2 border-[#1F2032] h-52 px-3 py-3 md:font-medium text-sm outline-none h-[200px] rounded"
           name="message"
           required
           placeholder="Escribe tu Mensaje..."
         />
         <input
-          className="px-3 py-3 mt-3 cursor-pointer md:w-1/3 h-14  font-medium bg-black text-white rounded-lg shadow-lg shadow-black/50 transform hover:-translate-y-1 hover:scale-110 transition duration-700 ease-in-out"
+          className="px-3 py-3 mt-3 cursor-pointer md:w-1/3 h-14  font-medium bg-[#0CFCA7] text-black rounded-lg shadow-lg shadow-black/50 transform hover:-translate-y-1 hover:scale-110 transition duration-700 ease-in-out"
           type="submit"
           value="Enviar"
         />

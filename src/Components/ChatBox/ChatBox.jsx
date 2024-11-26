@@ -55,7 +55,7 @@ export const ChatBox = () => {
     <>
       {showButton && (
         <div
-          className="fixed flex items-center font-poppins z-40 justify-center p-5 lg:bottom-3 bottom-4 right-4 lg:right-5 bg-black rounded-b-full rounded-tl-full border-2 border-white rounded-tr-lg cursor-pointer shadow-lg"
+          className="fixed flex items-center font-poppins z-40 justify-center p-5 lg:bottom-3 bottom-4 right-4 lg:right-5 bg-[#121326] rounded-b-full rounded-tl-full border-2 border-white rounded-tr-lg cursor-pointer shadow-lg"
           onClick={() => setShow(!show)}
         >
           <BsChatRightFill className="w-6 h-6 text-white" />
@@ -64,7 +64,7 @@ export const ChatBox = () => {
       <TransitionGroup>
         {show && (
           <CSSTransition classNames="chat-box" timeout={300} unmountOnExit>
-            <div className="fixed lg:bottom-5 font-poppins shadow-lg lg:right-5 z-50 lg:w-96 lg:h-auto bottom-0 w-full h-full right-0 bg-gray-800 rounded ">
+            <div className="fixed lg:bottom-5 font-poppins shadow-lg lg:right-5 z-50 lg:w-96 lg:h-auto bottom-0 w-full h-full right-0 bg-[#121326]  rounded ">
               <div className="flex items-center p-3 justify-between">
                 <h1 className="text-white text-sm font-bold text-center">
                   Contáctame
@@ -89,7 +89,7 @@ export const ChatBox = () => {
 
               {ShowSuccessMessage ? (
                 <div className="flex bg-white items-center justify-center w-96 h-96 flex-col gap-3 p-5 py-4 pb-5">
-                  <div className="rounded-full border-2 border-gray-800 p-3">
+                  <div className="rounded-full border-2 border-gray-800 border-solid border-2 border-[#1F2032]  shadow-lg shadow-black rounded-lg shadow-black/50 p-3">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -150,7 +150,7 @@ export const ChatBox = () => {
                       <input
                         type="submit"
                         value="Enviar"
-                        className="p-2 bg-gray-800 text-white rounded bg-gray-800 cursor-pointer"
+                        className="p-2 bg-[#121326] text-white rounded bg-gray-800 cursor-pointer"
                       />
                     </div>
                   </form>
