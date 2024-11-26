@@ -12,7 +12,7 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
 const links = [
-  { name: "Sobre mi", href: "/#about" },
+  { name: "Sobre mí", href: "/#about" },
   { name: "Habilidades", href: "/#skills" },
   { name: "Proyectos", href: "/#projects" },
   { name: "Contacto", href: "/#contact" },
