@@ -88,7 +88,7 @@ export const Contact = () => {
       </form>
 
       {ShowSuccessMessage && (
-        <div className="bg-white shadow-lg shadow-black fixed top-5 right-5 flex items-center justify-center gap-3 shadow-black/50 text-gray-500 px-4 py-5 rounded">
+        <div className="bg-white shadow-lg shadow-black z-50 fixed top-5 right-5 flex items-center justify-center gap-3 shadow-black/50 text-gray-500 px-4 py-5 rounded">
           <div className="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg dark:bg-green-800 dark:text-green-200">
             <svg
               className="w-5 h-5"

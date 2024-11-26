@@ -16,6 +16,7 @@ export const Projects = [
     description:
       "Desarrollé un e-commerce de ropa utilizando React, Tailwind CSS y Sass. Implementé un buscador avanzado que permite a los usuarios encontrar productos de manera rápida y eficiente. La tienda cuenta con un diseño totalmente responsivo, asegurando una experiencia de usuario óptima en dispositivos móviles, tabletas y escritorios.",
     Languages: [react, tailwind, sass],
+    // Languages: ["react", "tailwind", "ts"],
     url: "https://frostyfits.netlify.app/",
     github: "https://github.com/danielbeinat/FrostyFits.git",
   },
