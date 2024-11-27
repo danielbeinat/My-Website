@@ -1,10 +1,16 @@
 /** @type {import('tailwindcss').Config} */
+import { backIn } from "framer-motion";
 import tailwindScrollbar from "tailwind-scrollbar";
 
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+
+      backgroundImage: {
+        'gradient-custom': 'linear-gradient(to right, #3b82f6, #06b6d4, #14b8a6)',
+
+      },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
       },

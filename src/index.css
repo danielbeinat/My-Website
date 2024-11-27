@@ -3,6 +3,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-blue-500 via-cyan-400 to-teal-400 bg-clip-text text-transparent;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }

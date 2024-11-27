@@ -3,7 +3,7 @@ export const AboutSection = () => {
     <>
       <section id="about" className="pt-24 font-poppins flex flex-col">
         <div className="flex items-center flex-col justify-center gap-9">
-          <h1 className="md:text-4xl text-center bg-gradient-to-r from-blue-500 via-cyan-400 to-teal-400 bg-clip-text text-transparent text-3xl  font-bold uppercase">
+          <h1 className="md:text-4xl text-center text-gradient text-3xl  font-bold uppercase">
             Sobre mí
           </h1>
 

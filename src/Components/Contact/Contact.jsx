@@ -38,7 +38,7 @@ export const Contact = () => {
       className="font-poppins flex flex-col justify-center items-center gap-9 py-24"
     >
       <div className="flex items-center flex-col justify-center gap-9">
-        <h1 className="md:text-4xl bg-gradient-to-r from-blue-500 via-cyan-400 to-teal-400 bg-clip-text text-transparent text-3xl  font-bold uppercase">
+        <h1 className="md:text-4xl text-gradient text-3xl  font-bold uppercase">
           Contacto
         </h1>
         <p className="text-center text-white mx-auto md:w-3/5 px-5 font-medium font-bold">
