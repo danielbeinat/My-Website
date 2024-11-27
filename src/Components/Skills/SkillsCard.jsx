@@ -16,7 +16,7 @@ export const SkillsCard = ({ Card }) => {
       animate={isInView ? "visible" : "hidden"}
       variants={cardVariants}
     >
-      <div className="flex flex-col md:flex-row gap-4 mt-[100px]">
+      <div className="flex flex-col md:flex-row md:gap-4 gap-8 md:mt-[90px] mt-[50px]">
         {Card.map((card) => (
           <div
             key={card.id}

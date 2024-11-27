@@ -6,7 +6,7 @@ export const Skills = () => {
     <>
       <section
         id="skills"
-        className="font-poppins md:my-[40px] px-3 py-24 flex flex-col gap-10"
+        className="font-poppins md:my-[40px] px-3 pt-24 pb-8 flex flex-col "
       >
         <div className="flex items-center flex-col justify-center gap-9">
           <h1 className="md:text-4xl text-center text-gradient text-3xl font-bold uppercase">
