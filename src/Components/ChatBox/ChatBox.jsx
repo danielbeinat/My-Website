@@ -60,7 +60,7 @@ export const ChatBox = () => {
             exit={{ opacity: 0, scale: 0.8 }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="fixed flex items-center justify-center z-40 p-4 lg:bottom-6 bottom-6 right-6 lg:right-6 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-full shadow-lg cursor-pointer transition-all duration-300 ease-in-out"
+            className="fixed flex items-center justify-center font-poppins z-40 p-4 lg:bottom-6 bottom-6 right-6 lg:right-6 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-full shadow-lg cursor-pointer transition-all duration-300 ease-in-out"
             onClick={() => setShow(!show)}
           >
             <BsChatRightFill className="w-6 h-6 text-white" />
@@ -76,7 +76,7 @@ export const ChatBox = () => {
             exit={{ opacity: 0, y: 50 }}
             className="fixed lg:bottom-6 font-sans shadow-2xl lg:right-6 z-50 lg:w-96 w-full sm:w-[400px] sm:h-auto bottom-0 right-0 bg-white rounded-lg overflow-hidden"
           >
-            <div className="flex items-center p-4 bg-gradient-to-r from-purple-600 to-indigo-600 justify-between">
+            <div className="flex items-center font-poppins p-4 bg-gradient-to-r from-purple-600 to-indigo-600 justify-between">
               <h1 className="text-white text-lg font-bold">Contáctame</h1>
               <button
                 onClick={() => setShow(!show)}
@@ -101,7 +101,7 @@ export const ChatBox = () => {
 
             <div className="p-6">
               {showSuccessMessage ? (
-                <div className="flex items-center justify-center h-80 flex-col gap-4">
+                <div className="flex items-center font-poppins justify-center h-80 flex-col gap-4">
                   <div className="rounded-full bg-green-100 p-3">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -126,7 +126,11 @@ export const ChatBox = () => {
                   </p>
                 </div>
               ) : (
-                <form ref={form} onSubmit={sendEmail} className="space-y-4">
+                <form
+                  ref={form}
+                  onSubmit={sendEmail}
+                  className="space-y-4 font-poppins"
+                >
                   <div>
                     <label
                       htmlFor="user_name"
