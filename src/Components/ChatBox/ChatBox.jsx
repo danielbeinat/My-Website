@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { BsChatRightFill } from "react-icons/bs";
-import "./ChatBox.css";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
 import emailjs from "@emailjs/browser";
 
 const { VITE_EMAIL_SERVICE_ID, VITE_EMAIL_TEMPLATE_ID, VITE_EMAIL_PUBLIC_KEY } =
@@ -11,7 +10,7 @@ export const ChatBox = () => {
   const [show, setShow] = useState(false);
   const [showButton, setShowButton] = useState(false);
   const form = useRef();
-  const [ShowSuccessMessage, setShowSuccessMessage] = useState(false);
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
   useEffect(() => {
     let timeout;
@@ -35,14 +34,14 @@ export const ChatBox = () => {
         form.current,
         VITE_EMAIL_PUBLIC_KEY
       )
-
       .then(
         () => {
           console.log("SUCCESS!");
           e.target.reset();
           setShowSuccessMessage(true);
           setTimeout(() => {
-            // setShowSuccessMessage(false);
+            setShowSuccessMessage(false);
+            setShow(false);
           }, 3000);
         },
         (error) => {
@@ -53,50 +52,64 @@ export const ChatBox = () => {
 
   return (
     <>
-      {showButton && (
-        <div
-          className="fixed flex items-center font-poppins z-40 justify-center p-5 lg:bottom-3 bottom-4 right-4 lg:right-5 bg-[#121326] rounded-b-full rounded-tl-full border-2 border-white rounded-tr-lg cursor-pointer shadow-lg"
-          onClick={() => setShow(!show)}
-        >
-          <BsChatRightFill className="w-6 h-6 text-white" />
-        </div>
-      )}
-      <TransitionGroup>
-        {show && (
-          <CSSTransition classNames="chat-box" timeout={300} unmountOnExit>
-            <div className="fixed lg:bottom-5 font-poppins shadow-lg lg:right-5 z-50 lg:w-96 lg:h-auto bottom-0 w-full h-full right-0 bg-[#121326]  rounded border-2 border-[#1F2032] shadow-lg  ">
-              <div className="flex items-center p-3 justify-between">
-                <h1 className="text-white text-sm font-bold text-center">
-                  Contáctame
-                </h1>
-                <button onClick={() => setShow(!show)}>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="currentColor"
-                    className="w-6 h-6 text-white"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M6 18 18 6M6 6l12 12"
-                    />
-                  </svg>
-                </button>
-              </div>
+      <AnimatePresence>
+        {showButton && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.8 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="fixed flex items-center justify-center z-40 p-4 lg:bottom-6 bottom-6 right-6 lg:right-6 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-full shadow-lg cursor-pointer transition-all duration-300 ease-in-out"
+            onClick={() => setShow(!show)}
+          >
+            <BsChatRightFill className="w-6 h-6 text-white" />
+          </motion.div>
+        )}
+      </AnimatePresence>
 
-              {ShowSuccessMessage ? (
-                <div className="flex bg-white items-center justify-center w-96 h-96 flex-col gap-3 p-5 py-4 pb-5">
-                  <div className="rounded-full border-2 border-gray-800 border-solid border-2 border-[#1F2032]  shadow-lg shadow-black rounded-lg shadow-black/50 p-3">
+      <AnimatePresence>
+        {show && (
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 50 }}
+            className="fixed lg:bottom-6 font-sans shadow-2xl lg:right-6 z-50 lg:w-96 w-full sm:w-[400px] sm:h-auto bottom-0 right-0 bg-white rounded-lg overflow-hidden"
+          >
+            <div className="flex items-center p-4 bg-gradient-to-r from-purple-600 to-indigo-600 justify-between">
+              <h1 className="text-white text-lg font-bold">Contáctame</h1>
+              <button
+                onClick={() => setShow(!show)}
+                className="text-white hover:text-gray-200 transition-colors duration-200"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={2}
+                  stroke="currentColor"
+                  className="w-6 h-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <div className="p-6">
+              {showSuccessMessage ? (
+                <div className="flex items-center justify-center h-80 flex-col gap-4">
+                  <div className="rounded-full bg-green-100 p-3">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
                       strokeWidth={2}
                       stroke="currentColor"
-                      className="w-8 h-8 text-gray-800"
+                      className="w-8 h-8 text-green-600"
                     >
                       <path
                         strokeLinecap="round"
@@ -105,61 +118,80 @@ export const ChatBox = () => {
                       />
                     </svg>
                   </div>
-                  <h1 className="text-sm font-bold text-center text-gray-800">
+                  <h1 className="text-xl font-bold text-center text-gray-800">
                     Gracias por tu mensaje
                   </h1>
+                  <p className="text-gray-600 text-center">
+                    Te responderemos lo antes posible.
+                  </p>
                 </div>
               ) : (
-                <div className="flex bg-white flex-col p-5 py-4 pb-5 ">
-                  <form
-                    ref={form}
-                    onSubmit={sendEmail}
-                    className="flex flex-col gap-6 "
-                  >
-                    <fieldset className="flex flex-col gap-3">
-                      <label className="font-bold text-sm">Nombre</label>
-                      <input
-                        className="rounded p-2 border-2 text-sm border-gray-300"
-                        type="text"
-                        name="user_name"
-                        required
-                      />
-                    </fieldset>
-                    <fieldset className="flex flex-col gap-3">
-                      <label className="font-bold text-sm">
-                        Dirección de correo electrónico
-                      </label>
-                      <input
-                        className="rounded p-2 border-2 text-sm border-gray-300"
-                        type="email"
-                        name="user_email"
-                        required
-                      />
-                    </fieldset>
-                    <fieldset className="flex flex-col gap-3">
-                      <label className="font-bold text-sm">
-                        Escribe tu mensaje aquí
-                      </label>
-                      <textarea
-                        className="rounded p-2 border-2 border-gray-300 text-sm resize-none h-24 "
-                        name="message"
-                        required
-                      ></textarea>
-                    </fieldset>
-                    <div className="flex justify-end bg-white rounded-b">
-                      <input
-                        type="submit"
-                        value="Enviar"
-                        className="p-2 bg-[#121326] text-white rounded bg-gray-800 cursor-pointer"
-                      />
-                    </div>
-                  </form>
-                </div>
+                <form ref={form} onSubmit={sendEmail} className="space-y-4">
+                  <div>
+                    <label
+                      htmlFor="user_name"
+                      className="block text-sm font-medium text-gray-700 mb-1"
+                    >
+                      Nombre
+                    </label>
+                    <input
+                      id="user_name"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                      type="text"
+                      placeholder="Ingresa tu nombre"
+                      name="user_name"
+                      required
+                      pattern="^[A-Za-z\s]+$"
+                      title="Por favor, ingresa solo letras y espacios."
+                    />
+                  </div>
+                  <div>
+                    <label
+                      htmlFor="user_email"
+                      className="block text-sm font-medium text-gray-700 mb-1"
+                    >
+                      Dirección de correo electrónico
+                    </label>
+                    <input
+                      id="user_email"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                      type="email"
+                      placeholder="Ingresa tu correo"
+                      name="user_email"
+                      required
+                      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                      title="Por favor, ingresa un correo electrónico válido."
+                    />
+                  </div>
+                  <div>
+                    <label
+                      htmlFor="message"
+                      className="block text-sm font-medium text-gray-700 mb-1"
+                    >
+                      Escribe tu mensaje aquí
+                    </label>
+                    <textarea
+                      id="message"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 resize-none h-32"
+                      name="message"
+                      placeholder="Ingresa tu mensaje"
+                      required
+                    ></textarea>
+                  </div>
+                  <div className="flex justify-end">
+                    <button
+                      type="submit"
+                      className="px-4 py-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-md shadow-sm hover:from-purple-700 hover:to-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-200"
+                    >
+                      Enviar
+                    </button>
+                  </div>
+                </form>
               )}
             </div>
-          </CSSTransition>
+          </motion.div>
         )}
-      </TransitionGroup>
+      </AnimatePresence>
     </>
   );
 };
