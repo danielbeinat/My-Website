@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { BsChatRightFill } from "react-icons/bs";
 import emailjs from "@emailjs/browser";
+import { Send } from "lucide-react";
 
 const { VITE_EMAIL_SERVICE_ID, VITE_EMAIL_TEMPLATE_ID, VITE_EMAIL_PUBLIC_KEY } =
   import.meta.env;
@@ -185,9 +186,10 @@ export const ChatBox = () => {
                   <div className="flex justify-end">
                     <button
                       type="submit"
-                      className="px-4 py-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-md shadow-sm hover:from-purple-700 hover:to-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-200"
+                      className="px-4 flex items-center py-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-md shadow-sm hover:from-purple-700 hover:to-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-200"
                     >
-                      Enviar
+                      <Send className="h-4 w-4 mr-2" />
+                      <span>Enviar</span>
                     </button>
                   </div>
                 </form>
