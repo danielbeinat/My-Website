@@ -3,7 +3,9 @@ import react from "../SkillsLanguages/react.svg";
 import tailwind from "../SkillsLanguages/tailwind.svg";
 import bicishop from "./Images/bicishop.webp";
 import sass from "../SkillsLanguages/sass.svg";
-import arcadia from "../../assets/MyProjects/Images/arcadia.webp";
+// import arcadia from "../../assets/MyProjects/Images/arcadia.webp";
+import arcadiaImage from '../../assets/MyProjects/Images/arcadia.webp';
+
 import mp3linker from "./Images/mp3linker.webp";
 import visualimage from "./Images/visualimage.webp";
 import ts from "../SkillsLanguages/ts.svg";
@@ -47,7 +49,7 @@ export const Projects = [
   {
     id: 4,
     name: "Instituto Arcadia",
-    image: arcadia,
+    image: arcadiaImage,
     description: "Desarrollé un sitio web para gestionar inscripciones a carreras utilizando tecnologías de vanguardia como React y Tailwind CSS. El proyecto se centró en crear una interfaz de usuario intuitiva y receptiva",
     Languages: [react, tailwind, ts],
     url: "https://arcadia-university.netlify.app",
