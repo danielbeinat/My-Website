@@ -3,7 +3,7 @@ import react from "../SkillsLanguages/react.svg";
 import tailwind from "../SkillsLanguages/tailwind.svg";
 import bicishop from "./Images/bicishop.webp";
 import sass from "../SkillsLanguages/sass.svg";
-import arcadia from "./Images/arcadia.webp";
+import arcadia from "./Images/arcadia.jpg";
 import mp3linker from "./Images/mp3linker.webp";
 import visualimage from "./Images/visualimage.webp";
 import ts from "../SkillsLanguages/ts.svg";
