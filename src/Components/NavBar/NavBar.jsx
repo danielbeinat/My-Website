@@ -1,4 +1,3 @@
-import coding2 from "../../assets/coding2.svg";
 import netbook from "../../assets/netbook.svg";
 
 import { FaGithub, FaLinkedin } from "react-icons/fa";
