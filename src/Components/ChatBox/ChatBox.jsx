@@ -178,7 +178,7 @@ export const ChatBox = () => {
             exit={{ opacity: 0, scale: 0.8 }}
             whileHover={{ scale: 1.05, rotate: 5 }}
             whileTap={{ scale: 0.95 }}
-            className="fixed flex items-center justify-center font-poppins z-40 p-4 bottom-6 right-6 bg-gradient-to-r from-[#0CFCA7] to-[#1A91E8] rounded-full shadow-lg cursor-pointer transition-all duration-300 hover:shadow-[#0CFCA7]/50"
+            className="fixed flex items-center justify-center font-poppins z-40 p-4 bottom-6 right-6 bg-gradient-to-r from-[#0DA574] to-[#2196F3] rounded-full shadow-lg cursor-pointer transition-all duration-300 hover:shadow-[#0DA574]/50"
             onClick={() => setShow(!show)}
           >
             <MessageCircle className="w-6 h-6 text-white" />
@@ -194,7 +194,7 @@ export const ChatBox = () => {
             exit={{ opacity: 0, y: 50, scale: 0.9 }}
             className="fixed font-poppins shadow-2xl bottom-6 right-6 z-50 w-[calc(100vw-2rem)] h-[calc(100vh-8rem)] max-w-md bg-[#06071B]/95 backdrop-blur-xl rounded-2xl border border-white/10 overflow-hidden md:w-96 md:h-[500px]"
           >
-            <div className="flex items-center p-4 bg-gradient-to-r from-[#0CFCA7] to-[#1A91E8] justify-between">
+            <div className="flex items-center p-4 bg-gradient-to-r from-[#0DA574] to-[#2196F3] justify-between">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
                   <User className="w-6 h-6 text-white" />
@@ -234,7 +234,7 @@ export const ChatBox = () => {
                           className={`max-w-[80%] p-3 rounded-2xl ${
                             message.isBot
                               ? "bg-white/10 text-white border border-white/20"
-                              : "bg-gradient-to-r from-[#0CFCA7] to-[#1A91E8] text-white"
+                              : "bg-gradient-to-r from-[#0DA574] to-[#2196F3] text-white"
                           }`}
                         >
                           <p className="text-sm">{message.text}</p>
@@ -286,7 +286,7 @@ export const ChatBox = () => {
 
                     <button
                       onClick={() => setShowContactForm(true)}
-                      className="w-full px-4 py-2 bg-gradient-to-r from-[#0CFCA7] to-[#1A91E8] text-white rounded-lg hover:opacity-90 transition-opacity duration-200 flex items-center justify-center gap-2"
+                      className="w-full px-4 py-2 bg-gradient-to-r from-[#0DA574] to-[#2196F3] text-white rounded-lg hover:opacity-90 transition-opacity duration-200 flex items-center justify-center gap-2"
                     >
                       <Mail className="w-4 h-4" />
                       <span>Enviar mensaje directo</span>
@@ -302,7 +302,7 @@ export const ChatBox = () => {
                         animate={{ scale: 1 }}
                         className="rounded-full bg-green-500/20 p-4 border border-green-500/30"
                       >
-                        <MessageSquare className="w-8 h-8 text-[#0CFCA7]" />
+                        <MessageSquare className="w-8 h-8 text-[#0DA574]" />
                       </motion.div>
                       <h1 className="text-xl font-bold text-center text-white">
                         ¡Mensaje enviado! 🎉
@@ -323,7 +323,7 @@ export const ChatBox = () => {
                         </label>
                         <input
                           id="user_name"
-                          className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#0CFCA7]/50 focus:border-[#0CFCA7] transition-all duration-200"
+                          className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#0DA574]/50 focus:border-[#0DA574] transition-all duration-200"
                           type="text"
                           placeholder="Tu nombre"
                           name="user_name"
@@ -343,7 +343,7 @@ export const ChatBox = () => {
                         </label>
                         <input
                           id="user_email"
-                          className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#0CFCA7]/50 focus:border-[#0CFCA7] transition-all duration-200"
+                          className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#0DA574]/50 focus:border-[#0DA574] transition-all duration-200"
                           type="email"
                           placeholder="tu@email.com"
                           name="user_email"
@@ -363,7 +363,7 @@ export const ChatBox = () => {
                         </label>
                         <textarea
                           id="message"
-                          className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#0CFCA7]/50 focus:border-[#0CFCA7] resize-none h-32 transition-all duration-200"
+                          className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#0DA574]/50 focus:border-[#0DA574] resize-none h-32 transition-all duration-200"
                           name="message"
                           placeholder="Cuéntame sobre tu proyecto..."
                           required
@@ -380,7 +380,7 @@ export const ChatBox = () => {
                         </button>
                         <button
                           type="submit"
-                          className="flex-1 px-4 py-2 bg-gradient-to-r from-[#0CFCA7] to-[#1A91E8] text-white rounded-lg hover:opacity-90 transition-opacity duration-200 flex items-center justify-center gap-2"
+                          className="flex-1 px-4 py-2 bg-gradient-to-r from-[#0DA574] to-[#2196F3] text-white rounded-lg hover:opacity-90 transition-opacity duration-200 flex items-center justify-center gap-2"
                         >
                           <Send className="w-4 h-4" />
                           <span>Enviar</span>
