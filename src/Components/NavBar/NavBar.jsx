@@ -42,7 +42,13 @@ export const NavBar = () => {
   const isScrolled = useScroll();
 
   return (
-    <header className={"fixed top-0 w-full z-50 bg-[#06071B] "}>
+    <header
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        isScrolled
+          ? "bg-[#06071B]/95 backdrop-blur-md shadow-lg shadow-[#0CFCA7]/10"
+          : "bg-[#06071B]"
+      }`}
+    >
       <div className="max-w-7xl font-poppins mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 md:h-20 items-center justify-between">
           <button
@@ -56,10 +62,10 @@ export const NavBar = () => {
               <img
                 src={netbook}
                 alt="key"
-                className="w-8 h-8 md:w-10 md:h-10"
+                className="w-8 h-8 md:w-10 md:h-10 transition-transform duration-300 group-hover:rotate-12"
               />
 
-              <h1 className="text-base text-white font-bold hover:text-[#0CFCA7] cursor-pointer transition duration-500">
+              <h1 className="text-base text-white font-bold hover:text-[#0CFCA7] cursor-pointer transition-all duration-500">
                 Daniel Beinat
               </h1>
             </div>
@@ -71,7 +77,7 @@ export const NavBar = () => {
                 <li key={item.name}>
                   <a
                     href={item.href}
-                    className="text-white hover:text-[#0CFCA7] font-medium text-sm transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[#0CFCA7] after:transition-all hover:after:w-full"
+                    className="text-white hover:text-[#0CFCA7] font-medium text-sm transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[#0CFCA7] after:transition-all hover:after:w-full hover:scale-105"
                   >
                     {item.name}
                   </a>
@@ -86,7 +92,7 @@ export const NavBar = () => {
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white hover:text-[#0CFCA7] transition-all duration-300 hover:-translate-y-1 hover:scale-110"
+                  className="text-white hover:text-[#0CFCA7] transition-all duration-300 hover:-translate-y-1 hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(12,252,167,0.5)]"
                   aria-label={item.label}
                 >
                   <item.icon className="h-5 w-5" />
@@ -97,7 +103,7 @@ export const NavBar = () => {
 
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden rounded-md p-2 text-[#0CFCA7] hover:text-[#0CFCA7]/80 transition-colors"
+            className="md:hidden rounded-md p-2 text-[#0CFCA7] hover:text-[#0CFCA7]/80 hover:bg-white/10 transition-all duration-300"
             aria-label={isOpen ? "Close menu" : "Open menu"}
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -116,7 +122,7 @@ export const NavBar = () => {
               <li key={item.name}>
                 <a
                   href={item.href}
-                  className="block py-2 px-3 text-white hover:text-[#0CFCA7] hover:bg-white/5 rounded-md transition-colors"
+                  className="block py-2 px-3 text-white hover:text-[#0CFCA7] hover:bg-white/5 rounded-md transition-all duration-300"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
@@ -131,7 +137,7 @@ export const NavBar = () => {
                     href={item.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white hover:text-[#0CFCA7] transition-colors"
+                    className="text-white hover:text-[#0CFCA7] transition-all duration-300 hover:scale-110"
                     aria-label={item.label}
                   >
                     <item.icon className="h-5 w-5" />

@@ -1,4 +1,6 @@
 import { useRef, useState } from "react";
+import { motion } from "framer-motion";
+import { User, Mail, MessageSquare, Send, CheckCircle } from "lucide-react";
 import emailjs from "@emailjs/browser";
 const { VITE_EMAIL_SERVICE_ID, VITE_EMAIL_TEMPLATE_ID, VITE_EMAIL_PUBLIC_KEY } =
   import.meta.env;
@@ -15,7 +17,7 @@ export const Contact = () => {
         VITE_EMAIL_SERVICE_ID,
         VITE_EMAIL_TEMPLATE_ID,
         form.current,
-        VITE_EMAIL_PUBLIC_KEY
+        VITE_EMAIL_PUBLIC_KEY,
       )
       .then(
         () => {
@@ -28,81 +30,111 @@ export const Contact = () => {
         },
         (error) => {
           console.log("FAILED...", error.text);
-        }
+        },
       );
   };
 
   return (
-    <section
-      id="contact"
-      className="font-poppins flex flex-col justify-center items-center gap-9 py-24"
-    >
-      <div className="flex items-center flex-col justify-center gap-9">
-        <h1 className="md:text-4xl text-gradient text-3xl  font-bold uppercase">
-          Contacto
-        </h1>
-        <p className="text-center text-white mx-auto md:w-3/5 px-5 font-medium font-bold">
-          Puedes ponerte en contacto conmigo enviando el formulario que aparece
-          a continuación, y te responderé lo antes posible.
-        </p>
+    <section id="contact" className="font-poppins relative py-20">
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0CFCA7]/5 to-transparent pointer-events-none" />
+
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="flex flex-col items-center gap-12">
+          <div className="text-center">
+            <h1 className="md:text-4xl text-gradient text-3xl font-bold uppercase mb-4">
+              Contacto
+            </h1>
+            <div className="w-24 h-1 bg-gradient-to-r from-[#0CFCA7] to-[#1A91E8] mx-auto rounded-full mb-6" />
+            <p className="text-center text-white max-w-2xl mx-auto px-4 font-medium opacity-80">
+              ¿Tienes un proyecto en mente? Me encantaría saber de ti. Envíame
+              un mensaje y te responderé lo antes posible.
+            </p>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="w-full max-w-2xl"
+          >
+            <form
+              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 shadow-xl hover:shadow-[#0CFCA7]/20 transition-all duration-300"
+              ref={form}
+              onSubmit={sendEmail}
+            >
+              <div className="space-y-6">
+                <div className="space-y-2">
+                  <label className="flex items-center gap-2 text-white/80 font-medium text-sm">
+                    <User className="w-4 h-4" />
+                    Nombre
+                  </label>
+                  <input
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#0CFCA7]/50 focus:border-[#0CFCA7] transition-all duration-200"
+                    type="text"
+                    name="user_name"
+                    required
+                    placeholder="Tu nombre completo"
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <label className="flex items-center gap-2 text-white/80 font-medium text-sm">
+                    <Mail className="w-4 h-4" />
+                    Correo electrónico
+                  </label>
+                  <input
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#0CFCA7]/50 focus:border-[#0CFCA7] transition-all duration-200"
+                    type="email"
+                    name="user_email"
+                    required
+                    placeholder="tu@email.com"
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <label className="flex items-center gap-2 text-white/80 font-medium text-sm">
+                    <MessageSquare className="w-4 h-4" />
+                    Mensaje
+                  </label>
+                  <textarea
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#0CFCA7]/50 focus:border-[#0CFCA7] resize-none h-32 transition-all duration-200"
+                    name="message"
+                    required
+                    placeholder="Cuéntame sobre tu proyecto..."
+                  />
+                </div>
+
+                <motion.button
+                  type="submit"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-[#0CFCA7] to-[#1A91E8] text-white px-6 py-3 rounded-lg font-medium hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-[#0CFCA7]/30"
+                >
+                  <Send className="w-5 h-5" />
+                  <span>Enviar mensaje</span>
+                </motion.button>
+              </div>
+            </form>
+          </motion.div>
+        </div>
       </div>
-      <form
-        className="flex flex-col gap-3 bg-[#121326] p-5 md:py-10 md:px-10 border-solid border-2 border-[#1F2032]  shadow-lg shadow-black rounded-lg shadow-black/50 md:w-3/5 w-5/6 "
-        ref={form}
-        onSubmit={sendEmail}
-      >
-        <label className="font-bold md:text-sm text-xs text-gray-500">
-          Nombre
-        </label>
-        <input
-          className="w-full h-14 bg-zinc-200 border-solid border-2 border-[#1F2032] px-3 md:font-medium text-sm bg-zinc-200 outline-none rounded"
-          type="text"
-          name="user_name"
-          required
-          placeholder="Nombre"
-        />
-        <label className="font-bold md:text-sm text-xs text-gray-500">
-          Email
-        </label>
-        <input
-          className="w-full h-14 bg-zinc-200 border-solid border-2 border-[#1F2032] px-3 md:font-medium  text-sm bg-zinc-200 outline-none rounded"
-          type="email"
-          name="user_email"
-          required
-          placeholder="Correo electrónico"
-        />
-        <label className="font-bold md:text-sm text-xs text-gray-500">
-          Mensaje
-        </label>
-        <textarea
-          className="bg-zinc-200 bg-zinc-200 border-solid border-2 border-[#1F2032] h-52 px-3 py-3 md:font-medium text-sm outline-none h-[200px] rounded"
-          name="message"
-          required
-          placeholder="Escribe tu Mensaje..."
-        />
-        <input
-          className="px-3 py-3 mt-3 cursor-pointer md:w-1/3 h-14  font-medium bg-[#0CFCA7] text-black rounded-lg shadow-lg shadow-black/50 transform hover:-translate-y-1 hover:scale-110 transition duration-700 ease-in-out"
-          type="submit"
-          value="Enviar"
-        />
-      </form>
 
       {ShowSuccessMessage && (
-        <div className="bg-white shadow-lg shadow-black z-50 fixed top-5 right-5 flex items-center justify-center gap-3 shadow-black/50 text-gray-500 px-4 py-5 rounded">
-          <div className="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg dark:bg-green-800 dark:text-green-200">
-            <svg
-              className="w-5 h-5"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-            >
-              <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-            </svg>
-            <span className="sr-only">Check icon</span>
+        <motion.div
+          initial={{ opacity: 0, x: 100 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: 100 }}
+          className="fixed top-6 right-6 z-50 bg-white/95 backdrop-blur-sm border border-white/20 rounded-xl shadow-2xl p-4 flex items-center gap-3 min-w-[300px]"
+        >
+          <div className="flex-shrink-0 w-10 h-10 bg-green-500/20 rounded-full flex items-center justify-center">
+            <CheckCircle className="w-6 h-6 text-green-500" />
           </div>
-          ¡Mensaje enviado con éxito!
-        </div>
+          <div>
+            <p className="text-gray-800 font-semibold">¡Mensaje enviado!</p>
+            <p className="text-gray-600 text-sm">Te responderé pronto.</p>
+          </div>
+        </motion.div>
       )}
     </section>
   );

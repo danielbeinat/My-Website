@@ -7,6 +7,33 @@
   .text-gradient {
     @apply bg-gradient-to-r from-blue-500 via-cyan-400 to-teal-400 bg-clip-text text-transparent;
   }
+
+  .animate-typing {
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: white;
+    }
+  }
+
+  .delay-1000 {
+    animation-delay: 1s;
+  }
 }
 
 html {
@@ -30,4 +57,21 @@ body {
 
 #contact {
   scroll-margin-top: 5px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #06071b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #0cfca7, #1a91e8);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #0bedb3, #1586bc);
 }
