@@ -1,9 +1,10 @@
 import frostyfits from "./Images/frostyfits.webp";
+import boardy from "./Images/boardy.webp";
 import react from "../SkillsLanguages/react.svg";
 import tailwind from "../SkillsLanguages/tailwind.svg";
 import bicishop from "./Images/bicishop.webp";
 import sass from "../SkillsLanguages/sass.svg";
-import arcadia from "./Images/arcadia.jpg";
+import arcadia from "./Images/arcadia.webp";
 import mp3linker from "./Images/mp3linker.webp";
 import visualimage from "./Images/visualimage.webp";
 import ts from "../SkillsLanguages/ts.svg";
@@ -23,6 +24,16 @@ export const Projects = [
 
   {
     id: 2,
+    name: "Boardy",
+    image: boardy,
+    description: "Desarrollé una aplicación web para la gestión de tareas y proyectos utilizando React y Tailwind CSS. El proyecto se centró en crear una interfaz de usuario intuitiva y receptiva que permite a los usuarios organizar y administrar sus tareas de manera eficiente. Además, implementé un sistema de autenticación para los usuarios, permitiendo el acceso a contenido exclusivo y la gestión de sus datos personales.",
+    Languages: [react, tailwind, ts],
+    url: "https://boardy-app.netlify.app/",
+    github: "https://github.com/danielbeinat/Boardy.git",
+  },
+
+  {
+    id: 3,
     name: "BikeStore",
     image: bicishop,
     description:
@@ -34,18 +45,18 @@ export const Projects = [
 
 
   {
-    id: 3,
+    id: 4,
     name: "MP3Linker",
     image: mp3linker,
     description: "Desarrollé un convertidor de YouTube a MP3 utilizando React. La aplicación permite a los usuarios convertir videos de YouTube en archivos de audio MP3 con una interfaz moderna y receptiva. Además, integra la API de YouTube para obtener videos y utiliza i18next para traducir el contenido a varios idiomas.",
     Languages: [react, tailwind, ts],
     url: "https://mp3linker.netlify.app/",
-    github: "https://github.com/danielbeinat/Convert-YouTube-to-MP3",
+    github: "https://github.com/danielbeinat/MP3Linker.git",
   },
 
 
   {
-    id: 4,
+    id: 5,
     name: "Instituto Arcadia",
     image: arcadia,
     description: "Desarrollé un sitio web para gestionar inscripciones a carreras utilizando tecnologías de vanguardia como React y Tailwind CSS. El proyecto se centró en crear una interfaz de usuario intuitiva y receptiva",
@@ -55,12 +66,14 @@ export const Projects = [
   },
 
   {
-    id: 5,
+    id: 6,
     name: "Visual Image",
     image: visualimage,
     description: "Desarrollé una aplicación web que utiliza la API de Unsplash para buscar y descargar fotos de alta calidad de forma sencilla. Además, está diseñada para ser responsive, asegurando una buena experiencia de usuario en diferentes dispositivos.",
     Languages: [react, tailwind, ts],
     url: "https://visual-image.netlify.app/",
-    github: "https://github.com/danielbeinat/Visual-Focus.git",
+    github: "https://github.com/danielbeinat/VisualImage.git",
   },
+
+
 ];

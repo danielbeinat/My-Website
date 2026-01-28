@@ -34,14 +34,14 @@ export const Hero = () => {
               Daniel Beinat
             </h1>
             <div className="text-xl md:text-2xl text-[#0CFCA7] font-medium mt-2 opacity-90">
-              Frontend Developer
+              Fullstack Developer
             </div>
           </div>
 
           <p
             className={`text-[15px] md:text-xl text-white mb-8 font-medium text-center md:w-4/5 max-w-2xl mx-auto md:mx-0 leading-relaxed`}
           >
-            Desarrollador frontend especializado en crear interfaces web
+            Desarrollador fullstack especializado en crear interfaces web
             intuitivas y accesibles que brindan una excelente experiencia de
             usuario.
           </p>
