@@ -21,9 +21,9 @@ export const ProyectoAnimado = ({ proyecto }) => {
       whileHover={{ y: -5 }}
       className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden shadow-xl hover:shadow-[#0CFCA7]/20 transition-all duration-300 hover:border-[#0CFCA7]/30"
     >
-      <div className="relative overflow-hidden">
+      <div className="relative overflow-hidden aspect-video bg-white/5">
         <img
-          className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+          className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
           src={proyecto.image}
           alt={proyecto.name}
           loading="lazy"

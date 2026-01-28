@@ -21,12 +21,12 @@ export const AboutSection = () => {
                 </span>
                 , me especializo en el diseño y desarrollo de aplicaciones web
                 integrales, desde interfaces atractivas e intuitivas hasta
-                soluciones robustas en el servidor. Tengo un amplio
-                conocimiento de las últimas tecnologías web, como HTML, CSS,
-                JavaScript y frameworks populares como React, junto con Node.js
-                y bases de datos. Esto me permite
-                crear aplicaciones web modernas y escalables que cumplen con los
-                más altos estándares de usabilidad y accesibilidad.
+                soluciones robustas en el servidor. Tengo un amplio conocimiento
+                de las últimas tecnologías web, como HTML, CSS, JavaScript y
+                frameworks populares como React, junto con Node.js, MongoDB y
+                Docker. Esto me permite crear aplicaciones web modernas y
+                escalables que cumplen con los más altos estándares de
+                usabilidad y accesibilidad.
               </p>
             </div>
 
