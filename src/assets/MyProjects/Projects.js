@@ -10,14 +10,17 @@ import visualimage from "./Images/visualimage.webp";
 import ts from "../SkillsLanguages/ts.svg";
 import node from "../SkillsLanguages/node.svg";
 import mongodb from "../SkillsLanguages/mongodb.svg";
+import express from "../SkillsLanguages/node.svg"; // Usando icono de node para Express temporalmente si no hay uno específico
+import appwrite from "../SkillsLanguages/react.svg"; // Usando icono de react para Appwrite temporalmente
+import docker from "../SkillsLanguages/docker.svg";
 
 export const Projects = [
   {
     id: 1,
     name: "FrostyFits",
     image: frostyfits,
-    description: "Desarrollé un e-commerce de ropa utilizando React, Tailwind CSS, Sass, Node.js, MongoDB y Cloudinary para almacenar imágenes. Implementé un buscador avanzado que permite a los usuarios encontrar productos de manera rápida y eficiente. La tienda cuenta con un diseño totalmente responsivo, asegurando una experiencia de usuario óptima en dispositivos móviles, tabletas y escritorios.",
-    Languages: [react, tailwind, sass, node, mongodb],
+    description: "Desarrollé un e-commerce de ropa utilizando el stack MERN (MongoDB, Express, React, Node.js), Tailwind CSS y Sass. Implementé Cloudinary para imágenes, Stripe para pagos y Docker para asegurar un entorno de despliegue consistente y escalable.",
+    Languages: [react, tailwind, sass, node, mongodb, express, docker],
     url: "https://frostyfits.netlify.app/",
     github: "https://github.com/danielbeinat/FrostyFits.git",
   },
@@ -26,8 +29,8 @@ export const Projects = [
     id: 2,
     name: "Boardy",
     image: boardy,
-    description: "Desarrollé una aplicación web para la gestión de tareas y proyectos utilizando React y Tailwind CSS. El proyecto se centró en crear una interfaz de usuario intuitiva y receptiva que permite a los usuarios organizar y administrar sus tareas de manera eficiente. Además, implementé un sistema de autenticación para los usuarios, permitiendo el acceso a contenido exclusivo y la gestión de sus datos personales.",
-    Languages: [react, tailwind, ts],
+    description: "Desarrollé una aplicación de gestión de tareas utilizando React, TypeScript y Tailwind CSS. Implementé MongoDB para la persistencia de datos y Docker para la contenedorización, permitiendo un flujo de trabajo ágil y robusto en el manejo de proyectos.",
+    Languages: [react, tailwind, ts, mongodb, docker],
     url: "https://boardy-app.netlify.app/",
     github: "https://github.com/danielbeinat/Boardy.git",
   },
@@ -37,7 +40,7 @@ export const Projects = [
     name: "BikeStore",
     image: bicishop,
     description:
-      "Desarrollé una tienda de bicicletas utilizando tecnologías modernas como React y Tailwind CSS. El proyecto incluyó la creación de una interfaz de usuario interactiva y responsiva que permite a los usuarios navegar y comprar bicicletas de manera intuitiva. Implementé un sistema de filtrado avanzado para que los clientes puedan buscar productos por categorías, precios y características específicas.",
+      "Desarrollé una tienda virtual de bicicletas utilizando React, TypeScript y Tailwind CSS. Implementé un sistema de filtrado dinámico por categorías y precios, carrito de compras y persistencia de datos. El enfoque principal fue el rendimiento y una interfaz limpia que mejora la conversión de ventas.",
     Languages: [react, tailwind, ts],
     url: "https://bikestore-shop.netlify.app/",
     github: "https://github.com/danielbeinat/BikeStore.git",
@@ -48,7 +51,7 @@ export const Projects = [
     id: 4,
     name: "MP3Linker",
     image: mp3linker,
-    description: "Desarrollé un convertidor de YouTube a MP3 utilizando React. La aplicación permite a los usuarios convertir videos de YouTube en archivos de audio MP3 con una interfaz moderna y receptiva. Además, integra la API de YouTube para obtener videos y utiliza i18next para traducir el contenido a varios idiomas.",
+    description: "Desarrollé una herramienta de conversión de YouTube a MP3 utilizando React y TypeScript. La aplicación integra la API de YouTube Data V3 para búsquedas en tiempo real y utiliza i18next para soporte multiidioma. Enfocada en la rapidez de conversión y una UI minimalista y funcional.",
     Languages: [react, tailwind, ts],
     url: "https://mp3linker.netlify.app/",
     github: "https://github.com/danielbeinat/MP3Linker.git",
@@ -59,7 +62,7 @@ export const Projects = [
     id: 5,
     name: "Instituto Arcadia",
     image: arcadia,
-    description: "Desarrollé un sitio web para gestionar inscripciones a carreras utilizando tecnologías de vanguardia como React y Tailwind CSS. El proyecto se centró en crear una interfaz de usuario intuitiva y receptiva",
+    description: "Desarrollé una plataforma educativa para la gestión de inscripciones utilizando React, TypeScript y Tailwind CSS. Incluye validación de formularios compleja, paneles informativos interactivos y un sistema de navegación optimizado para futuros estudiantes.",
     Languages: [react, tailwind, ts],
     url: "https://arcadia-university.netlify.app",
     github: "https://github.com/danielbeinat/Arcadia.git",
@@ -69,7 +72,7 @@ export const Projects = [
     id: 6,
     name: "Visual Image",
     image: visualimage,
-    description: "Desarrollé una aplicación web que utiliza la API de Unsplash para buscar y descargar fotos de alta calidad de forma sencilla. Además, está diseñada para ser responsive, asegurando una buena experiencia de usuario en diferentes dispositivos.",
+    description: "Desarrollé un buscador de imágenes profesional utilizando la API de Unsplash con React y TypeScript. Implementé scroll infinito, descarga directa de recursos en alta resolución y un diseño responsivo que adapta la galería de imágenes a cualquier tamaño de pantalla.",
     Languages: [react, tailwind, ts],
     url: "https://visual-image.netlify.app/",
     github: "https://github.com/danielbeinat/VisualImage.git",
