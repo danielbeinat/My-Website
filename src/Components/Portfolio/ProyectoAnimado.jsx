@@ -60,7 +60,7 @@ export const ProyectoAnimado = ({ proyecto }) => {
             className="flex-1 inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#0CFCA7] to-[#1A91E8] text-white px-4 py-2 rounded-lg font-medium hover:opacity-90 transition-all duration-300 hover:scale-105"
           >
             <ExternalLink className="w-4 h-4" />
-            <span className="text-sm">Demo</span>
+            <span className="text-sm">Ver Proyecto</span>
           </a>
 
           <a

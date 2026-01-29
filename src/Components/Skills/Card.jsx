@@ -1,3 +1,5 @@
+import docker from "../../assets/SkillsLanguages/docker.svg";
+
 export const Card = [
   {
     id: 1,
