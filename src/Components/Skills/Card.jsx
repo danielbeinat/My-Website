@@ -375,9 +375,7 @@ export const Card = [
         name: "MySQL",
       },
       {
-        icon: (
-          <img src={postgresql} alt="PostgreSQL" className="w-8 h-8" />
-        ),
+        icon: <img src={postgresql} alt="PostgreSQL" className="w-8 h-8" />,
         name: "PostgreSQL",
       },
       {
