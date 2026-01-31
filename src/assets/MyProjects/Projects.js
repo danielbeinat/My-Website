@@ -10,7 +10,7 @@ import visualimage from "./Images/visualimage.webp";
 import ts from "../SkillsLanguages/ts.svg";
 import node from "../SkillsLanguages/node.svg";
 import mongodb from "../SkillsLanguages/mongodb.svg";
-import express from "../SkillsLanguages/node.svg"; // Usando icono de node para Express temporalmente si no hay uno específico
+import postgresql from "../SkillsLanguages/postgresql.svg";
 import appwrite from "../SkillsLanguages/react.svg"; // Usando icono de react para Appwrite temporalmente
 import docker from "../SkillsLanguages/docker.svg";
 
@@ -20,7 +20,7 @@ export const Projects = [
     name: "FrostyFits",
     image: frostyfits,
     description: "Desarrollé un e-commerce de ropa utilizando el stack MERN (MongoDB, Express, React, Node.js), Tailwind CSS y Sass. Implementé Cloudinary para imágenes, Stripe para pagos y Docker para asegurar un entorno de despliegue consistente y escalable.",
-    Languages: [react, tailwind, sass, node, mongodb, express, docker],
+    Languages: [react, tailwind, sass, node, mongodb, docker],
     url: "https://frostyfits.netlify.app/",
     github: "https://github.com/danielbeinat/FrostyFits.git",
   },
@@ -37,6 +37,16 @@ export const Projects = [
 
   {
     id: 3,
+    name: "AcademiaNova",
+    image: arcadia,
+    description: "Plataforma integral de gestión universitaria. Incluye gestión de usuarios (RBAC), panel de administración, autenticación JWT, Nodemailer y Cloudinary. Stack: React, TypeScript, Node.js, PostgreSQL, Docker y Tailwind CSS.",
+    Languages: [react, tailwind, ts, node, postgresql, docker],
+    url: "https://arcadia-university.netlify.app",
+    github: "https://github.com/danielbeinat/Arcadia.git",
+  },
+
+  {
+    id: 4,
     name: "BikeStore",
     image: bicishop,
     description:
@@ -48,24 +58,13 @@ export const Projects = [
 
 
   {
-    id: 4,
+    id: 5,
     name: "MP3Linker",
     image: mp3linker,
     description: "Desarrollé una herramienta de conversión de YouTube a MP3 utilizando React y TypeScript. La aplicación integra la API de YouTube Data V3 para búsquedas en tiempo real y utiliza i18next para soporte multiidioma. Enfocada en la rapidez de conversión y una UI minimalista y funcional.",
     Languages: [react, tailwind, ts],
     url: "https://mp3linker.netlify.app/",
     github: "https://github.com/danielbeinat/MP3Linker.git",
-  },
-
-
-  {
-    id: 5,
-    name: "Instituto Arcadia",
-    image: arcadia,
-    description: "Desarrollé una plataforma educativa para la gestión de inscripciones utilizando React, TypeScript y Tailwind CSS. Incluye validación de formularios compleja, paneles informativos interactivos y un sistema de navegación optimizado para futuros estudiantes.",
-    Languages: [react, tailwind, ts],
-    url: "https://arcadia-university.netlify.app",
-    github: "https://github.com/danielbeinat/Arcadia.git",
   },
 
   {

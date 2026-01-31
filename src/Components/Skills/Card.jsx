@@ -1,4 +1,5 @@
 import docker from "../../assets/SkillsLanguages/docker.svg";
+import postgresql from "../../assets/SkillsLanguages/postgresql.svg";
 
 export const Card = [
   {
@@ -375,6 +376,12 @@ export const Card = [
       },
       {
         icon: (
+          <img src={postgresql} alt="PostgreSQL" className="w-8 h-8" />
+        ),
+        name: "PostgreSQL",
+      },
+      {
+        icon: (
           <svg
             viewBox="0 0 256 256"
             version="1.1"
@@ -532,7 +539,13 @@ export const Card = [
         name: "Postman",
       },
       {
-        icon: <img src={docker} alt="Docker" width="32" height="32" />,
+        icon: (
+          <img
+            src={docker}
+            alt="Docker icon"
+            style={{ width: "32px", height: "32px" }}
+          />
+        ),
         name: "Docker",
       },
       {
