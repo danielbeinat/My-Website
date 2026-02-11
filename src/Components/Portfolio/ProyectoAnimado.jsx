@@ -19,7 +19,7 @@ export const ProyectoAnimado = ({ proyecto }) => {
       animate={isInView ? "visible" : "hidden"}
       variants={cardVariants}
       whileHover={{ y: -5 }}
-      className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden shadow-xl hover:shadow-[#0CFCA7]/20 transition-all duration-300 hover:border-[#0CFCA7]/30"
+      className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden shadow-xl hover:shadow-[#0CFCA7]/20 transition-all duration-300 hover:border-[#0CFCA7]/30 h-full flex flex-col"
     >
       <div className="relative overflow-hidden aspect-video bg-white/5">
         <img
@@ -31,8 +31,8 @@ export const ProyectoAnimado = ({ proyecto }) => {
         <div className="absolute inset-0 bg-gradient-to-t from-[#06071B]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
 
-      <div className="p-6 flex flex-col gap-4">
-        <div>
+      <div className="p-6 flex flex-col gap-4 flex-1">
+        <div className="flex-1">
           <h2 className="text-xl font-bold text-white mb-2 group-hover:text-[#0CFCA7] transition-colors duration-300">
             {proyecto.name}
           </h2>
