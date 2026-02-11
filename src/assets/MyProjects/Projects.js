@@ -21,7 +21,7 @@ export const Projects = [
     image: frostyfits,
     description: "Desarrollé un e-commerce de ropa utilizando el stack MERN (MongoDB, Express, React, Node.js), Tailwind CSS y Sass. Implementé Cloudinary para imágenes, Stripe para pagos y Docker para asegurar un entorno de despliegue consistente y escalable.",
     Languages: [react, tailwind, sass, node, mongodb, docker],
-    url: "https://frostyfits.netlify.app/",
+    url: "https://frostyfits.vercel.app/",
     github: "https://github.com/danielbeinat/FrostyFits.git",
   },
 
