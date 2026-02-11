@@ -40,7 +40,7 @@ export const Projects = [
     name: "AcademiaNova",
     image: arcadia,
     description: "Plataforma integral de gestión universitaria con arquitectura full-stack moderna basada en Supabase. Incluye gestión de usuarios (RBAC), panel de administración, autenticación JWT, y servicios integrados de Supabase (PostgreSQL, Auth, Storage, Edge Functions) con real-time via WebSockets. Stack: React 18, Vite, TypeScript, Tailwind CSS, Framer Motion, Lucide React, Zod, Vitest, Netlify.",
-    Languages: [react, tailwind, ts, postgresql],
+    Languages: [react, tailwind, ts, postgresql, docker],
     url: "https://arcadia-university.netlify.app",
     github: "https://github.com/danielbeinat/Arcadia.git",
   },
@@ -64,7 +64,7 @@ export const Projects = [
     description: "Desarrollé una herramienta de conversión de YouTube a MP3 utilizando React y TypeScript. La aplicación integra la API de YouTube Data V3 para búsquedas en tiempo real y utiliza i18next para soporte multiidioma. Enfocada en la rapidez de conversión y una UI minimalista y funcional.",
     Languages: [react, tailwind, ts],
     url: "https://mp3linker.netlify.app/",
-    github: "https://github.com/danielbeinat/MP3Linker.git",
+    github: "https://github.com/danielbeinat/Convert-YouTube-to-MP3.git",
   },
 
   {
@@ -74,7 +74,7 @@ export const Projects = [
     description: "Desarrollé un buscador de imágenes profesional utilizando la API de Unsplash con React y TypeScript. Implementé scroll infinito, descarga directa de recursos en alta resolución y un diseño responsivo que adapta la galería de imágenes a cualquier tamaño de pantalla.",
     Languages: [react, tailwind, ts],
     url: "https://visual-image.netlify.app/",
-    github: "https://github.com/danielbeinat/VisualImage.git",
+    github: "https://github.com/danielbeinat/Visual-Focus.git",
   },
 
 
